@@ -60,6 +60,9 @@ The repository implements a PPO-based actor-critic approach tailored to the stru
 - `Multi-Robot Multi-Queue Control via Exhaustive Assignment Actor-Critic Learning.pdf`  
   Paper describing the mathematical formulation, learning architecture, and experimental results.
 
+- `docs/notebook_to_package_map.md`  
+  Refactor blueprint mapping notebook components into a production-style `queue-rl/` package layout.
+
 You may later want to split the notebook into modules such as `env.py`, `policy.py`, `baselines.py`, and `eval.py`, but for now the notebook-based structure is perfectly acceptable for a research release.
 
 ---
