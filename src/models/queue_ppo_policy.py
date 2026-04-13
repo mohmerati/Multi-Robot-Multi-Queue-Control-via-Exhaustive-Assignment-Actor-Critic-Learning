@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
-from src.models.actor import RobotQueueAttentionActor
-from src.models.critic import CTDECritic
 from torch.distributions import Categorical
 from stable_baselines3.common.policies import ActorCriticPolicy
 from stable_baselines3.common.distributions import MultiCategoricalDistribution
+from src.models.actor import RobotQueueAttentionActor
+from src.models.critic import CTDECritic
 
 class QueuePolicyNet_Attn(nn.Module):
     """
