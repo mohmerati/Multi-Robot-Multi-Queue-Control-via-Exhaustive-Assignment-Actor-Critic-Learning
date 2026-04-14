@@ -40,7 +40,7 @@ The repository implements a PPO-based actor-critic framework specialized to this
   The critic evaluates the global congestion state using pooled queue and robot features.
 
 - **Greedy baselines**  
-  The code includes exhaustive greedy baselines, including weighted ESL variants, for comparison.
+  The code includes exhaustive-serve-longest(ESL) baseline for comparison.
 
 ---
 
@@ -95,7 +95,7 @@ The repository implements a PPO-based actor-critic framework specialized to this
   Actor, critic, and SB3-compatible custom PPO policy wrapper.
 
 * `src/baselines/`
-  Deterministic ESL and weighted-ESL baseline policies.
+  Deterministic ESL baseline policy
 
 * `src/training/`
   Training script and experiment configuration files.
@@ -249,7 +249,7 @@ This script:
 
 1. reconstructs the evaluation scenario from the config
 2. loads a trained checkpoint
-3. evaluates the learned PPO policy against the weighted ESL baseline
+3. evaluates the learned PPO policy against the ESL baseline
 4. computes summary metrics and confidence intervals
 5. generates plots for queue evolution and capped-queue behavior
 
@@ -292,21 +292,6 @@ The repository includes deterministic greedy baselines in `src/baselines/esl.py`
 
 * **ESL**
   Exhaustive Serve Longest with deterministic tie-breaking.
-
-* **Weighted ESL**
-  Uses a weighted switching index of the form:
-
-```text
-I_i = w_i q_i + \lambda_i
-```
-
-where:
-
-* `q_i` is the queue length
-* `w_i` is the queue cost weight
-* `\lambda_i` is the arrival rate
-
-These baselines are used during evaluation for comparison against the learned PPO policy.
 
 ---
 
