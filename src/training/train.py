@@ -20,7 +20,6 @@ class ParallelQueueEvalCallback(BaseCallback):
     Parallel evaluation using your existing rollout_collect_mean_q_parallel().
     Selects best model by LOWEST episode-average queue mean.
     """
-
     def __init__(
         self,
         eval_env_kwargs: dict,
@@ -362,6 +361,9 @@ def main():
         tb_log_name=f"{run_name}_additional_steps",
         callback=callback,
     )
+
+    # model.save(best_model_dir / "final_model.zip")
+    # print(f"Saved final model to {best_model_dir / 'final_model.zip'}")
 
 if __name__ == "__main__":
     main()

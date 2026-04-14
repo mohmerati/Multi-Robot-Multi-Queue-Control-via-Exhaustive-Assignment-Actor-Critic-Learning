@@ -4,7 +4,7 @@ from src.envs.queue_env import QueueEnv
 from concurrent.futures import ProcessPoolExecutor
 import multiprocessing as mp
 from src.baselines import make_weighted_esl
-from src.evaluation.eval import mean_ci95
+from .stats import mean_ci95
 
 def _occupied_queue_set(action: np.ndarray) -> set:
     """

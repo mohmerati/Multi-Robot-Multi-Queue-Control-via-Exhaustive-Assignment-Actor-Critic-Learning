@@ -44,6 +44,7 @@ def main():
 
     best_model_dir = cfg.CHECKPOINTS_DIR / run_name
     best_model_path = best_model_dir / "best_model.zip"
+    # best_model_path = best_model_dir / "final_model.zip"
 
     if not best_model_path.exists():
         raise FileNotFoundError(

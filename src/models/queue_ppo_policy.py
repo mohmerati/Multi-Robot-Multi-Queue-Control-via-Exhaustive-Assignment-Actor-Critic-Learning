@@ -5,6 +5,7 @@ from stable_baselines3.common.policies import ActorCriticPolicy
 from stable_baselines3.common.distributions import MultiCategoricalDistribution
 from src.models.actor import RobotQueueAttentionActor
 from src.models.critic import CTDECritic
+import torch.nn.functional as F
 
 class QueuePolicyNet_Attn(nn.Module):
     """

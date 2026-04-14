@@ -190,18 +190,18 @@ class QueueEnv(gym.Env):
         }
 
         # --- TRACE: rich info for debugging/analysis
-        info: Dict[str, Any] = {
-            "queues_before": queues_before,
-            "robots_before": robots_before,
-            "action_array": action.copy(),
-            "served_mask": served_mask,
-            "intended_positions": intended,
-            "robots_after": self._robots.copy(),
-            "arrivals": arrivals,
-            "num_projections": int(num_proj),
-            "reward": reward,
-            "truncated": truncated,
-        }
+        # info: Dict[str, Any] = {
+        #     "queues_before": queues_before,
+        #     "robots_before": robots_before,
+        #     "action_array": action.copy(),
+        #     "served_mask": served_mask,
+        #     "intended_positions": intended,
+        #     "robots_after": self._robots.copy(),
+        #     "arrivals": arrivals,
+        #     "num_projections": int(num_proj),
+        #     "reward": reward,
+        #     "truncated": truncated,
+        # }
         
         return obs, reward, terminated, truncated, info
 
