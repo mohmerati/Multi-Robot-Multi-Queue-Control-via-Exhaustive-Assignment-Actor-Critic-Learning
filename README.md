@@ -385,11 +385,3 @@ You may also cite the related structural-control paper:
 ## Contact
 
 For questions about the code or the project, please open an issue on the repository.
-
-```
-
-A few optional improvements would make this even better:
-- add a short “Quick Start” near the top,
-- include one example checkpoint path,
-- and add a small section called “Common Pitfalls” for import-path and virtual-environment issues.
-```
