@@ -1,4 +1,3 @@
-````markdown
 # Multi-Robot Multi-Queue Control via Exhaustive Assignment Actor-Critic Learning
 
 This repository contains research code for structure-aware reinforcement learning in multi-robot, multi-queue scheduling systems with stochastic arrivals and switching delays. The project studies a discrete-time setting in which each queue can host at most one robot per slot, service takes one time step, switching between queues incurs a one-step delay, and arrivals follow heterogeneous Bernoulli processes. The objective is to minimize discounted holding cost over time.
